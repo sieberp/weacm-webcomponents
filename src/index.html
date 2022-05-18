@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/waecm01.esm.js"></script>
+    <script nomodule src="/build/waecm01.js"></script>
+  </head>
+  <body>
+    <waecm01-cookie-banner policy-link="https://google.com" application-name="WAECM01"></waecm01-cookie-banner>
+    <script>
+      const myComp = document.querySelector('waecm01-cookie-banner');
+      myComp.addEventListener('on-accept', e => alert(`Der User akzpetiert folgende Cookies: ${e.detail}`));
+    </script>
+  </body>
+</html>

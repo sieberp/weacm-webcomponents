@@ -1,0 +1,86 @@
+:host {
+  display: block;
+  max-width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  background-color: white;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  gap: 10px;
+}
+
+
+.button_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.button_container > button {
+  font-size: 1.2rem;
+  padding: 0.2rem 1.5rem;
+}
+
+.selection_container {
+  font-size: 1.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.selection_element {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.switch {
+  width: 30px;
+  height: 16px;
+  background-color: gray;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.switch[data-checked] {
+  justify-content: flex-end;
+  background-color: green;
+}
+
+.selection_element:first-of-type > .switch {
+  background-color: lightgreen;
+}
+
+.handle {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 500px) {
+  .wrapper {
+    border-top: 2px solid black;
+    bottom: 0;
+    height: fit-content;
+    max-width: 100vw;
+    width: 100vw;
+    flex-direction: row;
+  }
+}
